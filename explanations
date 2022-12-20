@@ -1,0 +1,25 @@
+task_3 problem_5
+
+In general the centroid coordinates are very close for both methods. In some cases it is seen that method from task 3 got more details which makes the coordinates distract from the real centroid a little bit.
+
+Also for the 51th image it is hard to get the details as the colors of the person are not very in contrast and have similar tones, I needed to increase the contrast to get the details. Also applying maximum filter was giving good results but the contrast increase worked better. I applied contrast enhance on all images. Also I applied gaussian bluring to decrese noise in binary image outputs for the layers. The layers were further filtered with morphological operators such as dilate and erode. After those modifications done in task 1 i applied the algorithm of task_3. 
+
+
+task_4
+Here I applied the full algorithm from task 3 (task1 filters + task3).
+Again we see that there are problems with the image 51 in the elipses, the face is hardly recognized on some angles that are close to 90 degree on both directions. Not fully rotated images are better contoured, this might be because of the lighting which gives the faces more structured characteristics. All other images are better recognized(maybe because of the vivid face features that create more shaidngs and have better contrast in colors.) Also the challenge in the image 51 might also occur because of the ears that are not visible.
+
+
+task 5 
+the method 2 performed better as it has more connected parts and the face bounds are seen better. For the first method we have too many splitted edges that go inside and outside of the broders of the face. In case of method two we have clear mapped contours for the important parts of the face. However the pictures that contain hair are still having disconnected parts but still have separate contoured parts.Also the pictures that have poor lighting do not show any good result for method 2 and we almost see no lines but in case of method 1 we see the overall structure of the face(with disconnected small lines). Meaning we can further enhance the bound detection in poor lighting with method 1 with dilation or smoothening and sharpening sequences. 
+
+
+task_6
+
+I added noise to layer 1s as they were showing nothing and to math other images noise would help.
+
+Still could not get any result for task 2 and getting blank images, meaning we lost too much information. 
+Also we cannot compare the centroid coordinates as the images have different sizes so it can be done only with eye.
+For the third task we dont see any nested elipses that are around the important parts like nose, mouth, ears etc.
+So the low resolution does not have any adventege over the high resolution images.
+In the task of finding face bounds with skeletonizing and other methods we see that method 1 outperforms method 2 in case of low resolution images. But still it fails to find the bounds of the faces. 
